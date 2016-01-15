@@ -1,11 +1,11 @@
+![Taste of Code](http://cd.sseu.re/2016_01_15_23_30_42_etxia.jpg)
+
+Welcome the first ever Taste of Code.
+===================================
+
 - hosted and sponsored by TomTom
 - introduction to codaisseur. train developers and teach skill for people to apply in their job + why we do this
 - Uitleggen dat we van alles maar een 'taste geven' en alleen uitleggen wat we doen.
-
-
-Welcome the first ever Tast of Code.
-===================================
-
 - The whole day will be a interactive excercise where we show you a bit of theory and after that immidiately let you apply this theory. If things go too fast, please slow me down by asking questions.
 - Our starters will be HTML and CSS. They will prepare you for the main course, Javascript!
 - All presentations and exercises will be in English but most teachers and coaches speak Dutch aswell.
