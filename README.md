@@ -237,7 +237,28 @@ Exercise 11
 >  Show a counter for each disappeared balloon
 
 
+Welcome to the end of our Javascript afternoon program. We have some additional exercises lined up for you
 
+Extra Repetition
+
+> Style the counter with CSS
+
+> Make the loop run 15 times instead of 10
+
+>
+
+
+
+Extra Enhancement
+
+> Change the color of a balloon
+
+> Add animation
+
+
+Extra general
+
+> Put it online
 
 ----
 Now for the desert we have several additional exerisices
