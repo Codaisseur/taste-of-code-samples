@@ -68,22 +68,26 @@ Let us all do this together. We make a css selector for body and add the green p
 
 Let us select the HTML TAG 
 And now we change the setting for background color to green
->>> Use selector to change the color of the html page
 
-How would we select the Header(<h1>)? We will do this by creating a css class. A css class can contain certain properties that can be applied to multiple elements. 
+> Use selector to change the color of the html page
+
+How would we select the Header(`<h1>`)? We will do this by creating a css class. A css class can contain certain properties that can be applied to multiple elements. 
 
 Lets assume we want to be able to display a warning text. A warning text is underlined and is red.
 
-To apply the warning text to our existing document we need to write it inline. This is done inside a <STYLE> tag. A css class looks like this: `.class{}` and properties always look like this: `property: value;`
+To apply the warning text to our existing document we need to write it inline. This is done inside a `<style>` tag. A css class looks like this: `.class{}` and properties always look like this: `property: value;`
 
 If we make a warning class it would look like this:
+
+```css
 .warning{
 	color: red;
 	text-decoration: underline;
 }
+```
 
 
-If you want to apply a certain CSS class to a html tag, you have to assign it in the tag like class='warning'.
+If you want to apply a certain CSS class to a html tag, you have to assign it in the tag like `class='warning'`.
 
 - Lets apply the warning class to the h1
 
@@ -150,8 +154,10 @@ TODO: TERM function, method, object
 
 We can also do this multiple times. This is called a loop. A loop looks like this:
 
+```javascript
 for(var i=0; i<10; i++){
 }
+```
 
 TERM loop
 >> explain a bit about logic and true and false (i<10 , i!==10, )
