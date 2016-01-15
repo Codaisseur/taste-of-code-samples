@@ -1,46 +1,135 @@
 <html>
 <head>
     <style>
+        body {
+          background-color: #7ee2ff;
+          background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+          font-family: Helvetica, Arial, sans-serif;
+          cursor: url(crosshair.png) 64 64, auto;
+        }
+
+        .balloon{
+          position: absolute;
+          cursor: url(crosshair-hot.png) 64 64, auto;
+        }
+
         .bubble{
             width: 180px;
             height: 200px;
             background: #ffed26;
             border-radius: 180px / 200px;
         }
-        .string{
+
+        .string {
             height: 100px;
             width: 1px;
             background: #000000;
             margin-left: 90px;
         }
+
+        .score-box {
+          font-size: 40px;
+          position: absolute;
+          bottom: 20px;
+          width: 100%;
+          text-align: center;
+        }
+
+        .score-box .replay,
+        .score-box .label {
+          visibility: hidden;
+        }
+
+        .score-box.ready {
+          top: 50%;
+        }
+
+        .score-box.ready .replay,
+        .score-box.ready .label {
+          visibility: visible;
+        }
+
+        .score-box .replay {
+          border: 1px solid #f33;
+          padding: 4px;
+          border-radius: 5px;
+          font-size: 35px;
+          color: #fff;
+          text-decoration: none;
+          background: #f66;
+          display: block;
+          margin: 10px;
+        }
+
+        .score-box.ready .badge {
+          width: 350px;
+          height: 150px;
+          padding: 15px;
+          margin: 0px auto;
+          border-radius: 15px;
+          border: 4px solid #fff;
+          background-color: rgba(37, 120, 144, 0.62);
+          box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.62);
+        }
     </style>
 </head>
 <body>
-  <div class="counter">
-    0
+  <div class="score-box">
+    <div class="badge">
+      <span class="label">Your Score:</span>
+      <div class="counter">0</div>
+      <a href="#" class="replay">Replay</a>
+    </div>
   </div>
 <div class="balloon">
-    <div class="bubble">
-    </div>
-    <div class="string">
-
-    </div>
-
+  <div class="bubble"></div>
+  <div class="string"></div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
+    var colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]
     var balloon = $( ".balloon" );
     var counter = 0;
-    for(var i = 0; i < 5; i++){
+
+    for(var i = 0; i < 50; i++){
+      var balloon_width, balloon_height, balloon_color, xdiff;
       var balloon_copy = balloon.clone();
       balloon_copy.appendTo( "body" );
+
+      bubble = balloon_copy.find('.bubble');
+      string = balloon_copy.find('.string');
+
+      balloon_width = Math.max(20, Math.floor(Math.random() * 90) + 1);
+      balloon_height = 1.2 * balloon_width;
+      balloon_color = colors[Math.floor(Math.random() * colors.length)];
+
+      bubble.css({"background-color": balloon_color, height: balloon_height, width: balloon_width});
+      string.css({"margin-left": (0.5*balloon_width), height: (0.5*balloon_height)});
+
+      balloon_copy.css({left: '50%', bottom: 0});
+
+      var pop_sound = new Audio('balloon-pop.mp3');
+
       balloon_copy.click(function(){
+        pop_sound.play();
         $(this).remove();
-        counter = counter + 1;
+        counter = counter + 100-balloon_width;
         $('.counter').html(counter);
       });
+
+      var xdiff = Math.floor(Math.random() * 100);
+      balloon_copy.animate({bottom: '100%', left: xdiff + "%"}, (8000 - balloon_width*10));
     };
+
+    window.setTimeout(function() {
+      $('.score-box').addClass('ready');
+      $('.replay').bind('click', function(e) {
+        e.preventDefault();
+        window.location.reload();
+      });
+    }, 8000);
+
     balloon.remove();
 </script>
 </body>
