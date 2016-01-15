@@ -85,6 +85,7 @@ If we make a warning class it would look like this:
 	color: red;
 	text-decoration: underline;
 }
+```
 
 If you want to apply a certain CSS class to a html tag, you have to assign it in the tag like `class='warning'`.
 
