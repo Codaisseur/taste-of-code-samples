@@ -239,13 +239,17 @@ Exercise 11
 
 Welcome to the end of our Javascript afternoon program. We have some additional exercises lined up for you
 
+
+Dessert
+===================================
+
 Extra Repetition
 
 > Style the counter with CSS
 
 > Make the loop run 15 times instead of 10
 
->
+> Use something else instead of balloons
 
 
 
@@ -255,17 +259,13 @@ Extra Enhancement
 
 > Add animation
 
+> Show counter in the center of the screen after all balloons are offscreen
+
+> Add Sound
+
+> Advanced animation
+
 
 Extra general
 
-> Put it online
-
-----
-Now for the desert we have several additional exerisices
-TODO:
-- Animation
-- Style the shit out of the counter
-- Make the same but with images (of balloons or anything)
-- Make sure baloons arent spawned off screen
-- API for scorekeeping (AJAX)?
-- Put it online
+> Put it online at bitballoon
