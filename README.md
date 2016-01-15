@@ -62,7 +62,7 @@ And now we change the setting for background color to green
 
 Exercise
 ---
-> Use selector to change the color of the html page to green
+> Use selector to change the color of the html page to green and the text color to white
 
 How would we select the Header(`<h1>`)? We will do this by creating a css class. A css class can contain certain properties that can be applied to multiple elements.
 
@@ -162,7 +162,7 @@ We can do this with normal javascript, but javascript is a old language and not 
 So we choose to use jQuery for this. jQuery is specifically created to make it easy to work with HTML and javascript.
 
 ---
-> TODO explain a bit more what jquery is and what libraries are
+> TODO explain a bit more what jquery is and what librarians are
 
 ---
 
