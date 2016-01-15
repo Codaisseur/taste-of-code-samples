@@ -91,46 +91,57 @@
     var colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]
     var balloon = $( ".balloon" );
     var counter = 0;
+    balloon.hide();
 
-    for(var i = 0; i < 50; i++){
-      var balloon_width, balloon_height, balloon_color, xdiff;
-      var balloon_copy = balloon.clone();
-      balloon_copy.appendTo( "body" );
+    function start() {
+      for(var i = 0; i < 50; i++){
+        var balloon_width, balloon_height, balloon_color, xdiff;
+        var balloon_copy = balloon.clone();
+        balloon_copy.appendTo( "body" );
 
-      bubble = balloon_copy.find('.bubble');
-      string = balloon_copy.find('.string');
+        bubble = balloon_copy.find('.bubble');
+        string = balloon_copy.find('.string');
 
-      balloon_width = Math.max(20, Math.floor(Math.random() * 90) + 1);
-      balloon_height = 1.2 * balloon_width;
-      balloon_color = colors[Math.floor(Math.random() * colors.length)];
+        balloon_width = Math.max(20, Math.floor(Math.random() * 90) + 1);
+        balloon_height = 1.2 * balloon_width;
+        balloon_color = colors[Math.floor(Math.random() * colors.length)];
 
-      bubble.css({"background-color": balloon_color, height: balloon_height, width: balloon_width});
-      string.css({"margin-left": (0.5*balloon_width), height: (0.5*balloon_height)});
+        bubble.css({"background-color": balloon_color, height: balloon_height, width: balloon_width});
+        string.css({"margin-left": (0.5*balloon_width), height: (0.5*balloon_height)});
 
-      balloon_copy.css({left: '50%', bottom: 0});
+        balloon_copy.css({left: '50%', bottom: 0});
 
-      var pop_sound = new Audio('balloon-pop.mp3');
+        balloon_copy.click(function(){
+          pop_sound.play();
+          $(this).remove();
+          counter = counter + 100-balloon_width;
+          $('.counter').html(counter);
+        });
 
-      balloon_copy.click(function(){
-        pop_sound.play();
-        $(this).remove();
-        counter = counter + 100-balloon_width;
-        $('.counter').html(counter);
-      });
+        var xdiff = Math.floor(Math.random() * 100);
+        balloon_copy.show();
+        balloon_copy.animate({bottom: '100%', left: xdiff + "%"}, (8000 - balloon_width*10));
+      };
 
-      var xdiff = Math.floor(Math.random() * 100);
-      balloon_copy.animate({bottom: '100%', left: xdiff + "%"}, (8000 - balloon_width*10));
-    };
+      window.setTimeout(function() {
+        $('.score-box').addClass('ready');
+        $('.replay').bind('click', function(e) {
+          e.preventDefault();
+          window.location.reload();
+        });
+      }, 8000);
 
-    window.setTimeout(function() {
-      $('.score-box').addClass('ready');
-      $('.replay').bind('click', function(e) {
-        e.preventDefault();
-        window.location.reload();
-      });
-    }, 8000);
+      balloon.remove();
+    }
 
-    balloon.remove();
+    function preloadPopSound(){
+      var audio = new Audio('balloon-pop.mp3');
+      audio.preload = "auto";
+      $(audio).on("loadeddata", start);  // jQuery checking
+      return audio;
+    }
+
+    var pop_sound = preloadPopSound();
 </script>
 </body>
 </html>
