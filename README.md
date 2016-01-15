@@ -257,6 +257,8 @@ Extra Enhancement
 
 > Change the color of a balloon
 
+> Change the color of all balloons
+
 > Add animation
 
 > Show counter in the center of the screen after all balloons are offscreen
