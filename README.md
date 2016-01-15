@@ -36,7 +36,7 @@ what is a tag. Always close tags
 
 Tags have a certain style by default. Look at paragraph and Header for example.
 
-Exercise
+Exercise 01
 ---
 > Everyone open up your laptops and lets write the base of the html document we will be using today.
 
@@ -60,7 +60,7 @@ Let us all do this together. We make a css selector for body and add the green p
 Let us select the HTML TAG
 And now we change the setting for background color to green
 
-Exercise
+Exercise 02
 ---
 > Use selector to change the color of the html page to green and the text color to white
 
@@ -83,13 +83,13 @@ If we make a warning class it would look like this:
 
 If you want to apply a certain CSS class to a html tag, you have to assign it in the tag like `class='warning'`.
 
-Exercise
+Exercise 03
 ---
 > Lets apply the warning class to the h1
 
 There are many more things we can change.
 
-Exercise
+Exercise 03
 ---
 > border & radius
 
@@ -100,7 +100,7 @@ A balloon will exist of a container tag, a bubble and a string
 
 You can pick any color for your balloon. The easiest way to do this is by its english name. (You can also pick a color with a value. !explain hexidecimal?!)
 
-Exercise
+Exercise 04
 ---
 > circle and color
 
@@ -108,7 +108,7 @@ Exercise
 
 Now lets add a line for the balloon.
 
-Exercise
+Exercise 04
 ---
 > balloon string
 
@@ -168,20 +168,20 @@ So we choose to use jQuery for this. jQuery is specifically created to make it e
 
 Let us add Jquery to the page and test if it works.
 
-Exercise
+Exercise 05
 ---
 > Add jquery to the page and test if `$` gives something back.
 
 With jquery we can easily select our balloon and duplicate it.
 
-Exercise
+Exercise 06
 ---
 > Select the balloon and call `clone()` on it.
 
 Selecting is nice, but sometimes you want to use it at a later time. To do this you can work with a variable. A variable is a combination of a name and a value
 
 
-Exercise
+Exercise 07
 ---
 >  Show you can also use variable for the `window` object and the `window.close()` function and for the result of `1 + 1`
 
@@ -203,26 +203,45 @@ A loop can have different shapes but this is its most common one.
 The keyword for is used to note the start of the loop. Then a counter is created that is increased every time the loop runs. and every time it is run there is a check to see if it should stop already.
 
 
-Exercise
+Exercise 08
 ---
 > Duplicate the balloon in a loop
 
+One of the nice things about javascript is that you can react to certain events in the browser. These events will generally come from something the user does.
 
+We can for example tell the browser to do something when a balloon is clicked
 
+Exercise 09
+---
+> Add click event to balloon
 
+> Make the balloon disappear
 
+Right now all the balloons are drawn from top to bottom. This is not so nice. So let us do some advanced positioning
 
-- Add a click event in the loop to make the balloon dissapear
-- position the balloon somewhere on the screen => TODO: Tell about position absolute and top, left positioning first.
-- Show a counter for each dissapeared balloon
+Right now our document is in the standard layout mode. But we can tell the browser we want to position our elements ourselves.
 
+We can do this by adding the `position: absolute` property to our balloon
+
+Exercise 10
+---
+> Add css for position absolute
+
+> Change position in the loop to draw all balloons on a line
+
+Off course to make it a game we need to keep the score. Let's make a counter to keep score of all balloons that were clicked
+
+Exercise 11
+---
+
+>  Show a counter for each disappeared balloon
 
 
 
 
 ----
 Now for the desert we have several additional exerisices
-
+TODO:
 - Animation
 - Style the shit out of the counter
 - Make the same but with images (of balloons or anything)
