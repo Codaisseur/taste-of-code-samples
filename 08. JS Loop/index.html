@@ -27,7 +27,8 @@
 <script>
     var balloon = $( ".balloon" );
     for(var i = 0; i < 5; i++){
-      balloon.clone().appendTo( "body" );
+      var balloonCopy = balloon.clone();
+      balloonCopy.appendTo( "body" );
     };
 
 </script>

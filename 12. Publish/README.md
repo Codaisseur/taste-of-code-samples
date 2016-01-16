@@ -1,4 +1,7 @@
 Exercise 20
 ---
 
-> Style the counter with CSS
+> - Go to [bitballoon.com](https://www.bitballoon.com/)
+> - Create an account
+> - ???
+> - profit

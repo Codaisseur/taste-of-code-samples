@@ -31,9 +31,9 @@
 <script>
     var balloon = $( ".balloon" );
     for(var i = 0; i < 5; i++){
-      var balloon_copy = balloon.clone();
-      balloon_copy.appendTo( "body" );
-      balloon_copy.click(function(){
+      var balloonCopy = balloon.clone();
+      balloonCopy.appendTo( "body" );
+      balloonCopy.click(function(){
         $( this ).remove();
       });
     };
