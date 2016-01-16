@@ -212,7 +212,8 @@ One of the nice things about javascript is that you can react to certain events 
 We can for example tell the browser to do something when a balloon is clicked
 
 ---
-> TODO explain about `this`
+> TODO explain about `this` and `function`
+
 ---
 
 
@@ -274,3 +275,5 @@ Extra Enhancement
 > Add Sound
 
 > Advanced animation
+
+> TODO: one by one
