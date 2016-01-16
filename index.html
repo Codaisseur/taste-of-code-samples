@@ -106,7 +106,12 @@
         balloon_height = 1.2 * balloon_width;
         balloon_color = colors[Math.floor(Math.random() * colors.length)];
 
-        bubble.css({"background-color": balloon_color, height: balloon_height, width: balloon_width});
+        bubble.css({
+          "background-color": balloon_color,
+          height: balloon_height,
+          width: balloon_width,
+          "border-radius": balloon_width + "px / " + balloon_height + "px"
+        });
         string.css({"margin-left": (0.5*balloon_width), height: (0.5*balloon_height)});
 
         balloon_copy.css({left: '50%', bottom: 0});
