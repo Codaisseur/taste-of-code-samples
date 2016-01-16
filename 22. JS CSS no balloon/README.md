@@ -1,4 +1,4 @@
-Exercise 20
+Exercise 22
 ---
 
-> Style the counter with CSS
+> Use something different as a balloon. For example an image

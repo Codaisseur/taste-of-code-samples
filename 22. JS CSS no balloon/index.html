@@ -1,47 +1,35 @@
 <html>
 <head>
     <style>
-        .bubble{
-            width: 180px;
-            height: 200px;
-            background: #ffed26;
-            border-radius: 180px / 200px;
-        }
-        .string{
-            height: 100px;
-            width: 1px;
-            background: #000000;
-            margin-left: 90px;
+        .cat{
+          position: absolute;
+          background-image: url('grumpy.gif');
+          width: 225px;
+          height: 225px;
         }
     </style>
 </head>
 <body>
   <div class="counter">
-    0
   </div>
-<div class="balloon">
-    <div class="bubble">
-    </div>
-    <div class="string">
-
-    </div>
-
+<div class="cat">
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
-    var balloon = $( ".balloon" );
+    var cat = $( ".cat" );
     var counter = 0;
     for(var i = 0; i < 5; i++){
-      var balloonCopy = balloon.clone();
-      balloonCopy.appendTo( "body" );
-      balloonCopy.click(function(){
+      var catCopy = cat.clone();
+      catCopy.css({left: (200*i), bottom: 0});
+      catCopy.appendTo( "body" );
+      catCopy.click(function(){
         $(this).remove();
         counter = counter + 1;
         $('.counter').html(counter);
       });
     };
-    balloon.remove();
+    cat.remove();
 </script>
 </body>
 </html>

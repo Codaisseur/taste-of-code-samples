@@ -19,9 +19,6 @@
     </style>
 </head>
 <body>
-  <div class="counter">
-    0
-  </div>
 <div class="balloon">
     <div class="bubble">
     </div>
@@ -34,14 +31,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
     var balloon = $( ".balloon" );
-    var counter = 0;
     for(var i = 0; i < 5; i++){
       var balloonCopy = balloon.clone();
+      balloonCopy.css({left: (200*i), bottom: 0});
       balloonCopy.appendTo( "body" );
       balloonCopy.click(function(){
         $(this).remove();
-        counter = counter + 1;
-        $('.counter').html(counter);
       });
     };
     balloon.remove();

@@ -91,37 +91,36 @@
     var colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]
     var balloon = $( ".balloon" );
     var counter = 0;
-<<<<<<< Updated upstream
     balloon.hide();
 
     function start() {
       for(var i = 0; i < 50; i++){
-        var balloon_width, balloon_height, balloon_color, xdiff;
-        var balloon_copy = balloon.clone();
-        balloon_copy.appendTo( "body" );
+        var balloonWidth, balloonHeight, balloonColor, xdiff;
+        var balloonCopy = balloon.clone();
+        balloonCopy.appendTo( "body" );
 
-        bubble = balloon_copy.find('.bubble');
-        string = balloon_copy.find('.string');
+        bubble = balloonCopy.find('.bubble');
+        string = balloonCopy.find('.string');
 
-        balloon_width = Math.max(20, Math.floor(Math.random() * 90) + 1);
-        balloon_height = 1.2 * balloon_width;
-        balloon_color = colors[Math.floor(Math.random() * colors.length)];
+        balloonWidth = Math.max(20, Math.floor(Math.random() * 90) + 1);
+        balloonHeight = 1.2 * balloonWidth;
+        balloonColor = colors[Math.floor(Math.random() * colors.length)];
 
-        bubble.css({"background-color": balloon_color, height: balloon_height, width: balloon_width});
-        string.css({"margin-left": (0.5*balloon_width), height: (0.5*balloon_height)});
+        bubble.css({"background-color": balloonColor, height: balloonHeight, width: balloonWidth});
+        string.css({"margin-left": (0.5 * balloonWidth), height: (0.5 * balloonHeight)});
 
-        balloon_copy.css({left: '50%', bottom: 0});
+        balloonCopy.css({left: '50%', bottom: 0});
 
-        balloon_copy.click(function(){
-          pop_sound.play();
+        balloonCopy.click(function(){
+          popSound.play();
           $(this).remove();
-          counter = counter + 100-balloon_width;
+          counter = counter + 100-balloonWidth;
           $('.counter').html(counter);
         });
 
         var xdiff = Math.floor(Math.random() * 100);
-        balloon_copy.show();
-        balloon_copy.animate({bottom: '100%', left: xdiff + "%"}, (8000 - balloon_width*10));
+        balloonCopy.show();
+        balloonCopy.animate({bottom: '100%', left: xdiff + "%"}, (8000 - balloonWidth*10));
       };
 
       window.setTimeout(function() {
@@ -142,49 +141,7 @@
       return audio;
     }
 
-    var pop_sound = preloadPopSound();
-=======
-
-    for(var i = 0; i < 50; i++){
-      var balloonWidth, balloonHeight, balloonColor, xdiff;
-      var balloonCopy = balloon.clone();
-      balloonCopy.appendTo( "body" );
-
-      bubble = balloonCopy.find('.bubble');
-      string = balloonCopy.find('.string');
-
-      balloonWidth = Math.max(20, Math.floor(Math.random() * 90) + 1);
-      balloonHeight = 1.2 * balloonWidth;
-      balloonColor = colors[Math.floor(Math.random() * colors.length)];
-
-      bubble.css({"background-color": balloonColor, height: balloonHeight, width: balloonWidth});
-      string.css({"margin-left": (0.5*balloonWidth), height: (0.5*balloonHeight)});
-
-      balloonCopy.css({left: '50%', bottom: 0});
-
-      var pop_sound = new Audio('balloon-pop.mp3');
-
-      balloonCopy.click(function(){
-        pop_sound.play();
-        $(this).remove();
-        counter = counter + 100-balloonWidth;
-        $('.counter').html(counter);
-      });
-
-      var xdiff = Math.floor(Math.random() * 100);
-      balloonCopy.animate({bottom: '100%', left: xdiff + "%"}, (8000 - balloonWidth*10));
-    };
-
-    window.setTimeout(function() {
-      $('.score-box').addClass('ready');
-      $('.replay').bind('click', function(e) {
-        e.preventDefault();
-        window.location.reload();
-      });
-    }, 8000);
-
-    balloon.remove();
->>>>>>> Stashed changes
+    var popSound = preloadPopSound();
 </script>
 </body>
 </html>

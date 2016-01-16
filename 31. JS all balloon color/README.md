@@ -1,4 +1,6 @@
-Exercise 20
+Exercise 31
 ---
 
-> Style the counter with CSS
+> Change the color of all balloons
+> Create an array of colors
+> Pick a color for each step in the loop
