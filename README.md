@@ -252,6 +252,9 @@ Extra Repetition
 > Use something else instead of balloons
 
 
+> Change the cursor
+
+> Externalize CSS
 
 Extra Enhancement
 
