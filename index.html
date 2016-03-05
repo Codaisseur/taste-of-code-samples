@@ -95,32 +95,37 @@
 
     function start() {
       for(var i = 0; i < 50; i++){
-        var balloonWidth, balloonHeight, balloonColor, xdiff;
-        var balloonCopy = balloon.clone();
-        balloonCopy.appendTo( "body" );
+        var balloon_width, balloon_height, balloon_color, xdiff;
+        var balloon_copy = balloon.clone();
+        balloon_copy.appendTo( "body" );
 
-        bubble = balloonCopy.find('.bubble');
-        string = balloonCopy.find('.string');
+        bubble = balloon_copy.find('.bubble');
+        string = balloon_copy.find('.string');
 
-        balloonWidth = Math.max(20, Math.floor(Math.random() * 90) + 1);
-        balloonHeight = 1.2 * balloonWidth;
-        balloonColor = colors[Math.floor(Math.random() * colors.length)];
+        balloon_width = Math.max(20, Math.floor(Math.random() * 90) + 1);
+        balloon_height = 1.2 * balloon_width;
+        balloon_color = colors[Math.floor(Math.random() * colors.length)];
 
-        bubble.css({"background-color": balloonColor, height: balloonHeight, width: balloonWidth});
-        string.css({"margin-left": (0.5 * balloonWidth), height: (0.5 * balloonHeight)});
+        bubble.css({
+          "background-color": balloon_color,
+          height: balloon_height,
+          width: balloon_width,
+          "border-radius": balloon_width + "px / " + balloon_height + "px"
+        });
+        string.css({"margin-left": (0.5*balloon_width), height: (0.5*balloon_height)});
 
-        balloonCopy.css({left: '50%', bottom: 0});
+        balloon_copy.css({left: '50%', bottom: 0});
 
-        balloonCopy.click(function(){
-          popSound.play();
+        balloon_copy.click(function(){
+          pop_sound.play();
           $(this).remove();
-          counter = counter + 100-balloonWidth;
+          counter = counter + 100-balloon_width;
           $('.counter').html(counter);
         });
 
         var xdiff = Math.floor(Math.random() * 100);
-        balloonCopy.show();
-        balloonCopy.animate({bottom: '100%', left: xdiff + "%"}, (8000 - balloonWidth*10));
+        balloon_copy.show();
+        balloon_copy.animate({bottom: '100%', left: xdiff + "%"}, (8000 - balloon_width*10));
       };
 
       window.setTimeout(function() {
@@ -141,7 +146,7 @@
       return audio;
     }
 
-    var popSound = preloadPopSound();
+    var pop_sound = preloadPopSound();
 </script>
 </body>
 </html>

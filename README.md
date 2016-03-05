@@ -261,6 +261,9 @@ Extra Repetition
 
 > TODO: smaller balloons
 
+> Change the cursor
+
+> Externalize CSS
 
 Extra Enhancement
 

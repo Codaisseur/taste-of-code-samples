@@ -1,15 +1,18 @@
 <html>
 <head>
     <style>
-        .balloon{
+        .balloon {
           position: absolute;
+          bottom: 0;
         }
+
         .bubble{
             width: 180px;
             height: 200px;
             background: #ffed26;
             border-radius: 180px / 200px;
         }
+
         .string{
             height: 100px;
             width: 1px;
@@ -20,6 +23,7 @@
 </head>
 <body>
   <div class="counter">
+    0
   </div>
 <div class="balloon">
     <div class="bubble">
@@ -34,16 +38,20 @@
 <script>
     var balloon = $( ".balloon" );
     var counter = 0;
+
     for(var i = 0; i < 5; i++){
-      var balloonCopy = balloon.clone();
-      balloonCopy.css({left: (200*i), bottom: 0});
-      balloonCopy.appendTo( "body" );
-      balloonCopy.click(function(){
+      var balloon_copy = balloon.clone();
+      balloon_copy.css({ left: (200*i)});
+      balloon_copy.appendTo( "body" );
+
+      balloon_copy.click(function(){
         $(this).remove();
+
         counter = counter + 1;
         $('.counter').html(counter);
       });
     };
+
     balloon.remove();
 </script>
 </body>

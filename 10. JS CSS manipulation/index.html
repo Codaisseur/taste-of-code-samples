@@ -1,15 +1,18 @@
 <html>
 <head>
     <style>
-        .balloon{
+        .balloon {
           position: absolute;
+          bottom: 0;
         }
+
         .bubble{
             width: 180px;
             height: 200px;
             background: #ffed26;
             border-radius: 180px / 200px;
         }
+
         .string{
             height: 100px;
             width: 1px;
@@ -19,6 +22,9 @@
     </style>
 </head>
 <body>
+<div class="counter">
+    0
+</div>
 <div class="balloon">
     <div class="bubble">
     </div>
@@ -31,13 +37,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
     var balloon = $( ".balloon" );
+
     for(var i = 0; i < 5; i++){
-      var balloonCopy = balloon.clone();
-      balloonCopy.css({left: (200*i), bottom: 0});
-      balloonCopy.appendTo( "body" );
-      balloonCopy.click(function(){
-        $(this).remove();
-      });
+        var balloon_copy = balloon.clone();
+
+        balloon_copy.css({ left: (200*i)});
+
+        balloon_copy.appendTo( "body" );
+
+        balloon_copy.click(function(){
+            $(this).remove();
+        });
     };
     balloon.remove();
 </script>

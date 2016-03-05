@@ -1,7 +1,5 @@
-Exercise 20
+Exercise 12
 ---
 
-> - Go to [bitballoon.com](https://www.bitballoon.com/)
-> - Create an account
-> - ???
-> - profit
+1. Go to [Bitballoon.com](https://www.bitballoon.com)
+2. Drag and drop the folder containing your files to upload.

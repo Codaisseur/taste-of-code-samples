@@ -1,33 +1,78 @@
 <html>
 <head>
     <style>
-        .balloon{
+        .balloon {
           position: absolute;
+          bottom: 0;
         }
+
         .bubble{
             width: 180px;
             height: 200px;
             background: #ffed26;
             border-radius: 180px / 200px;
         }
+
         .string{
             height: 100px;
             width: 1px;
             background: #000000;
             margin-left: 90px;
         }
-        .counter{
+
+        .score-box {
           font-size: 40px;
-          padding: 10px;
-          width: 100px;
-          margin: auto;
-          border: 1px solid red;
+          position: absolute;
+          bottom: 20px;
+          width: 100%;
           text-align: center;
+        }
+
+        .score-box .replay,
+        .score-box .label {
+          visibility: hidden;
+        }
+
+        .score-box.ready {
+          top: 50%;
+        }
+
+        .score-box.ready .replay,
+        .score-box.ready .label {
+          visibility: visible;
+        }
+
+        .score-box .replay {
+          border: 1px solid #f33;
+          padding: 4px;
+          border-radius: 5px;
+          font-size: 35px;
+          color: #fff;
+          text-decoration: none;
+          background: #f66;
+          display: block;
+          margin: 10px;
+        }
+
+        .score-box.ready .badge {
+          width: 350px;
+          height: 150px;
+          padding: 15px;
+          margin: 0px auto;
+          border-radius: 15px;
+          border: 4px solid #fff;
+          background-color: rgba(37, 120, 144, 0.62);
+          box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.62);
         }
     </style>
 </head>
 <body>
-  <div class="counter">
+  <div class="score-box">
+    <div class="badge">
+      <span class="label">Your Score:</span>
+      <div class="counter">0</div>
+      <a href="#" class="replay">Replay</a>
+    </div>
   </div>
 <div class="balloon">
     <div class="bubble">
@@ -42,16 +87,26 @@
 <script>
     var balloon = $( ".balloon" );
     var counter = 0;
+
     for(var i = 0; i < 5; i++){
-      var balloonCopy = balloon.clone();
-      balloonCopy.css({left: (200*i), bottom: 0});
-      balloonCopy.appendTo( "body" );
-      balloonCopy.click(function(){
+      var balloon_copy = balloon.clone();
+      balloon_copy.appendTo( "body" );
+
+      balloon_copy.click(function(){
         $(this).remove();
         counter = counter + 1;
         $('.counter').html(counter);
+
+        if (counter == 5) {
+          $('.score-box').addClass('ready');
+          $('.replay').bind('click', function(e) {
+            e.preventDefault();
+            window.location.reload();
+          });
+        }
       });
     };
+
     balloon.remove();
 </script>
 </body>
