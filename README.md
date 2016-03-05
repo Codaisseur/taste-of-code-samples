@@ -211,6 +211,12 @@ One of the nice things about javascript is that you can react to certain events 
 
 We can for example tell the browser to do something when a balloon is clicked
 
+---
+> TODO explain about `this` and `function`
+
+---
+
+
 Exercise 09
 ---
 > Add click event to balloon
@@ -239,6 +245,8 @@ Exercise 11
 
 Welcome to the end of our Javascript afternoon program. We have some additional exercises lined up for you
 
+Let us end this with putting our work online on bitballoon.com
+
 
 Dessert
 ===================================
@@ -251,6 +259,7 @@ Extra Repetition
 
 > Use something else instead of balloons
 
+> TODO: smaller balloons
 
 > Change the cursor
 
@@ -270,7 +279,4 @@ Extra Enhancement
 
 > Advanced animation
 
-
-Extra general
-
-> Put it online at bitballoon
+> TODO: one by one

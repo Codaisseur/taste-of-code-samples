@@ -1,6 +1,9 @@
 <html>
 <head>
     <style>
+        .balloon{
+          position: absolute;
+        }
         .bubble{
             width: 180px;
             height: 200px;
@@ -17,7 +20,6 @@
 </head>
 <body>
   <div class="counter">
-    0
   </div>
 <div class="balloon">
     <div class="bubble">
@@ -33,13 +35,16 @@
     var balloon = $( ".balloon" );
     var counter = 0;
     for(var i = 0; i < 5; i++){
-      var balloon_copy = balloon.clone();
-      balloon_copy.appendTo( "body" );
-      balloon_copy.click(function(){
+      var balloonCopy = balloon.clone();
+      balloonCopy.css({left: (200*i), bottom: 0});
+      balloonCopy.appendTo( "body" );
+      balloonCopy.click(function(){
         $(this).remove();
         counter = counter + 1;
         $('.counter').html(counter);
       });
+      
+      balloonCopy.animate({bottom: '100%'}, 5000);
     };
     balloon.remove();
 </script>

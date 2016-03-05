@@ -1,4 +1,6 @@
-Exercise 20
+Exercise 32
 ---
 
-> Style the counter with CSS
+> Add animation to the balloons
+> use the animate function in jquery
+> animate({bottom: '100%'}, 5000);

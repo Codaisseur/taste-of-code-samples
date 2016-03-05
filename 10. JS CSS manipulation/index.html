@@ -22,9 +22,9 @@
     </style>
 </head>
 <body>
-  <div class="counter">
+<div class="counter">
     0
-  </div>
+</div>
 <div class="balloon">
     <div class="bubble">
     </div>
@@ -39,15 +39,15 @@
     var balloon = $( ".balloon" );
 
     for(var i = 0; i < 5; i++){
-      var balloon_copy = balloon.clone();
+        var balloon_copy = balloon.clone();
 
-      balloon_copy.css({ left: (200*i)});
+        balloon_copy.css({ left: (200*i)});
 
-      balloon_copy.appendTo( "body" );
+        balloon_copy.appendTo( "body" );
 
-      balloon_copy.click(function(){
-        $(this).remove();
-      });
+        balloon_copy.click(function(){
+            $(this).remove();
+        });
     };
     balloon.remove();
 </script>
