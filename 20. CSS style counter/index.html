@@ -1,47 +1,13 @@
 <html>
 <head>
     <style>
-        .balloon {
-          position: absolute;
-          bottom: 0;
-        }
-
-        .bubble{
-            width: 180px;
-            height: 200px;
-            background: #ffed26;
-            border-radius: 180px / 200px;
-        }
-
-        .string{
-            height: 100px;
-            width: 1px;
-            background: #000000;
-            margin-left: 90px;
-        }
-
+        /*Score box starts here */
         .score-box {
           font-size: 40px;
-          position: absolute;
-          bottom: 20px;
-          width: 100%;
           text-align: center;
         }
 
-        .score-box .replay,
-        .score-box .label {
-          visibility: hidden;
-        }
-
-        .score-box.ready {
-          top: 50%;
-        }
-
-        .score-box.ready .replay,
-        .score-box.ready .label {
-          visibility: visible;
-        }
-
+        /*Score box replay button */
         .score-box .replay {
           border: 1px solid #f33;
           padding: 4px;
@@ -51,10 +17,10 @@
           text-decoration: none;
           background: #f66;
           display: block;
-          margin: 10px;
+
         }
 
-        .score-box.ready .badge {
+        .score-box .badge {
           width: 350px;
           height: 150px;
           padding: 15px;
@@ -62,7 +28,6 @@
           border-radius: 15px;
           border: 4px solid #fff;
           background-color: rgba(37, 120, 144, 0.62);
-          box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.62);
         }
     </style>
 </head>
@@ -74,40 +39,5 @@
       <a href="#" class="replay">Replay</a>
     </div>
   </div>
-<div class="balloon">
-    <div class="bubble">
-    </div>
-    <div class="string">
-
-    </div>
-
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
-    var balloon = $( ".balloon" );
-    var counter = 0;
-
-    for(var i = 0; i < 5; i++){
-      var balloon_copy = balloon.clone();
-      balloon_copy.appendTo( "body" );
-
-      balloon_copy.click(function(){
-        $(this).remove();
-        counter = counter + 1;
-        $('.counter').html(counter);
-
-        if (counter == 5) {
-          $('.score-box').addClass('ready');
-          $('.replay').bind('click', function(e) {
-            e.preventDefault();
-            window.location.reload();
-          });
-        }
-      });
-    };
-
-    balloon.remove();
-</script>
 </body>
 </html>

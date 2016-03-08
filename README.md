@@ -1,6 +1,6 @@
 ![Taste of Code](http://cd.sseu.re/2016_01_15_23_30_42_etxia.jpg)
 
-Welcome the first ever Taste of Code.
+Welcome the Taste of Code.
 ===================================
 
 - hosted and sponsored by TomTom
@@ -96,7 +96,9 @@ Exercise 03
 Now let us make a balloon!
 A balloon will exist of a container tag, a bubble and a string
 
--To make a balloon we will use the DIV tag. With CSS we can make a balloon. Let us start with the bubble. It has to be round, and has a color. We can do this by setting a width and height and setting a background color and radius.
+> TODO: explain about pixels
+
+To make a balloon we will use the DIV tag. With CSS we can make a balloon. Let us start with the bubble. It has to be round, and has a color. We can do this by setting a width and height and setting a background color and radius.
 
 You can pick any color for your balloon. The easiest way to do this is by its english name. (You can also pick a color with a value. !explain hexidecimal?!)
 
@@ -261,8 +263,6 @@ Extra Repetition
 
 > TODO: smaller balloons
 
-> Change the cursor
-
 > Externalize CSS
 
 Extra Enhancement
@@ -277,6 +277,6 @@ Extra Enhancement
 
 > Add Sound
 
-> Advanced animation
+> Advanced animation (various speed)
 
 > TODO: one by one

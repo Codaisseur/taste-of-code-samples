@@ -1,0 +1,8 @@
+body{
+    background-color: green;
+    color: white;
+}
+.warning{
+    color: red;
+    text-decoration: underline;
+}

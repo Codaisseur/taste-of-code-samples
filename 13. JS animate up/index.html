@@ -38,15 +38,13 @@
 
 <script>
     var balloon = $(".balloon");
-    var clone = balloon.clone();
     var counter = 0;
-    balloon.remove();
+
     for (var i=0; i<10; i++) {
-        var another_balloon = clone.clone();
+        var another_balloon = balloon.clone();
 
         another_balloon.css({
-            left: '50%',
-            bottom: 0
+            left: i * 200
         });
 
         another_balloon.appendTo("body");
@@ -57,15 +55,12 @@
             $(".counter").html(counter);
         });
 
-        var xdiff = Math.floor(Math.random() * 100);
-
         another_balloon.animate({
-            bottom: "100%",
-            left: xdiff + "%"
-        }, 18000 - Math.random() * 15000);
+            bottom: "100%"
+        }, 8000);
     }
 
-
+    balloon.remove();
 </script>
 </body>
 
