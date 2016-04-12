@@ -1,9 +1,9 @@
-![Taste of Code](http://cd.sseu.re/2016_01_15_23_30_42_etxia.jpg)
+![Taste of Code](https://s3-eu-west-1.amazonaws.com/tasteofcode/TasteOfCodaisseur.001.jpeg)
 
 Welcome the Taste of Code.
 ===================================
 
-- hosted and sponsored by TomTom
+- hosted and sponsored by Mirabeau
 - introduction to codaisseur. train developers and teach skill for people to apply in their job + why we do this
 - Uitleggen dat we van alles maar een 'taste geven' en alleen uitleggen wat we doen.
 - The whole day will be a interactive excercise where we show you a bit of theory and after that immidiately let you apply this theory. If things go too fast, please slow me down by asking questions.
