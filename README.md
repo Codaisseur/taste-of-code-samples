@@ -280,3 +280,45 @@ Extra Enhancement
 > Advanced animation (various speed)
 
 > TODO: one by one
+
+
+Examples of earlier
+
+
+http://tasteofcode.bitballoon.com/
+
+First group:
+geologist-alexander-57143.bitballoon.com
+http://florist-daphne-71757.bitballoon.com/
+http://allcatsgotoheaven.bitballoon.com/
+http://gunner-otter-64220.bitballoon.com/
+http://solicitor-perkin-34680.bitballoon.com/
+http://gatekeeper-bonnie-35756.bitballoon.com/
+http://operator-dog-33562.bitballoon.com/
+golpher-hamster-77245.bitballoon.com
+geologist-mariam-13444.bitballoon.com
+http://itsawrap.bitballoon.com/
+http://jeweler-james-73540.bitballoon.com/
+http://model-pools-73822.bitballoon.com/
+http://driver-pegs-18552.bitballoon.com/hansfinal.html
+http://sinksub.bitballoon.com/
+http://tialda.getforge.io/
+
+Second group:
+http://surveyor-processor-77708.bitballoon.com/
+flying-birds.bitballoon.com
+hitsomeballoons.bitballoon.com
+http://christiansballoongame.bitballoon.com/
+http://aim-at-the-teacher.bitballoon.com/
+immigration-officer-ruby-23283.bitballoon.com
+janitor-michael-40142.bitballoon.com
+biochemist-tapir-50818.bitballoon.com
+angry-fire-shooting-elephant-baby-kings.bitballoon.com
+http://singer-cheetah-51760.bitballoon.com/
+http://lauras-manenjacht2.bitballoon.com/
+http://actor-hamster-44250.bitballoon.com/
+pop-a-cupcake2016.bitballoon.com
+cobbler-operator-38436.bitballoon.com
+http://athlete-ethel-86852.bitballoon.com/
+http://importer-frog-52157.bitballoon.com/
+http://greengame.bitballoon.com/

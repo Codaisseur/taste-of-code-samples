@@ -49,15 +49,17 @@
 
         another_balloon.appendTo("body");
 
+        
+
+        another_balloon.animate({
+            bottom: "100%"
+        }, 8000);
+		
         another_balloon.click(function() {
             $(this).remove();
             counter = counter + 1;
             $(".counter").html(counter);
         });
-
-        another_balloon.animate({
-            bottom: "100%"
-        }, 8000);
     }
 
     balloon.remove();
